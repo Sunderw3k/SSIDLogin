@@ -1,0 +1,115 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  DevAuthLoadingPlugin (DevAuth-forge-legacy-0.3.jar)
+Contact their authors BEFORE contacting forge
+
+// Don't be sad, have a hug! <3
+
+Time: 6/19/22 8:28 PM
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+	at net.minecraft.entity.player.EntityPlayer.handler$attackTargetEntityWithCurrentItem$zzb000(EntityPlayer.java:2801)
+	at net.minecraft.entity.player.EntityPlayer.attackTargetEntityWithCurrentItem(EntityPlayer.java:1498)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.attackEntity(PlayerControllerMP.java:511)
+	at net.minecraft.client.Minecraft.clickMouse(Minecraft.java:1524)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2141)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1100)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:384)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:95)
+	at GradleStart.main(GradleStart.java:24)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.entity.player.EntityPlayer.handler$attackTargetEntityWithCurrentItem$zzb000(EntityPlayer.java:2801)
+	at net.minecraft.entity.player.EntityPlayer.attackTargetEntityWithCurrentItem(EntityPlayer.java:1498)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.attackEntity(PlayerControllerMP.java:511)
+	at net.minecraft.client.Minecraft.clickMouse(Minecraft.java:1524)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 3 total; [EntityPlayerSP['TheGodKing69'/252054, l='MpServer', x=155.24, y=62.00, z=172.55], EntityOtherPlayerMP['KhakiLon'/252083, l='MpServer', x=166.88, y=62.00, z=168.56], EntityOtherPlayerMP['Hocro_NA'/252007, l='MpServer', x=186.70, y=62.82, z=164.63]]
+	Chunk stats: MultiplayerChunkCache: 441, 441
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 211.00,60.00,162.00 - World: (211,60,162), Chunk: (at 3,3,2 in 13,10; contains blocks 208,0,160 to 223,255,175), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 1740793214 game time, 906000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 122 total; [EntityPlayerSP['TheGodKing69'/252054, l='MpServer', x=155.24, y=62.00, z=172.55], EntityVillager['Aim10'/194562, l='MpServer', x=189.50, y=75.00, z=134.50], EntityOtherPlayerMP['Hocro_NA'/252007, l='MpServer', x=206.28, y=62.00, z=160.03], EntityVillager['Aim9'/194563, l='MpServer', x=184.50, y=74.00, z=134.50], EntityPig['Pig'/238082, l='MpServer', x=147.34, y=60.00, z=152.81], EntityPig['Pig'/238081, l='MpServer', x=141.44, y=60.00, z=155.41], EntityPig['Pig'/238087, l='MpServer', x=146.08, y=60.00, z=149.52], EntityPig['Pig'/238086, l='MpServer', x=140.46, y=60.00, z=150.99], EntityOtherPlayerMP['Hocro_NA'/252007, l='MpServer', x=202.88, y=62.00, z=162.38], EntityPig['Pig'/238085, l='MpServer', x=147.43, y=60.00, z=151.68], EntityPig['Pig'/238089, l='MpServer', x=145.68, y=60.00, z=150.64], EntityPig['Pig'/238088, l='MpServer', x=143.48, y=60.00, z=153.80], EntityPig['Pig'/238095, l='MpServer', x=145.76, y=60.00, z=152.78], EntityPig['Pig'/238094, l='MpServer', x=147.63, y=60.00, z=155.28], EntityPig['Pig'/238093, l='MpServer', x=147.33, y=60.00, z=149.47], EntityPig['Pig'/238096, l='MpServer', x=146.67, y=60.00, z=151.54], EntityPig['Pig'/238102, l='MpServer', x=142.33, y=60.00, z=152.01], EntityPig['Pig'/238100, l='MpServer', x=148.50, y=60.00, z=150.47], EntityPig['Pig'/238105, l='MpServer', x=146.81, y=60.00, z=154.22], EntityPig['Pig'/238104, l='MpServer', x=146.89, y=60.00, z=150.70], EntityOtherPlayerMP['Hocro_NA'/252007, l='MpServer', x=204.13, y=62.09, z=153.84], EntityPig['Pig'/238111, l='MpServer', x=141.32, y=60.00, z=153.28], EntityPig['Pig'/238110, l='MpServer', x=143.18, y=60.00, z=155.67], EntityPig['Pig'/238109, l='MpServer', x=142.31, y=60.00, z=153.13], EntityPig['Pig'/238108, l='MpServer', x=147.53, y=60.00, z=155.53], EntityPig['Pig'/238115, l='MpServer', x=143.56, y=60.00, z=149.48], EntityPig['Pig'/238114, l='MpServer', x=147.30, y=60.00, z=149.53], EntityPig['Pig'/238113, l='MpServer', x=145.42, y=60.00, z=148.47], EntityPig['Pig'/238112, l='MpServer', x=148.53, y=60.00, z=151.53], EntityOtherPlayerMP['arzpy'/252077, l='MpServer', x=204.50, y=62.00, z=166.60], EntityVillager['Aim8'/215081, l='MpServer', x=179.50, y=73.50, z=134.50], EntityVillager['Aim7'/215080, l='MpServer', x=174.50, y=73.00, z=134.50], EntityOtherPlayerMP['Hocro_NA'/252007, l='MpServer', x=259.75, y=62.32, z=162.13], EntityCow['Cow'/231986, l='MpServer', x=157.72, y=62.00, z=135.44], EntityCow['Cow'/231985, l='MpServer', x=159.00, y=62.00, z=135.47], EntityCow['Cow'/231984, l='MpServer', x=151.44, y=62.00, z=135.44], EntityCow['Cow'/231990, l='MpServer', x=152.69, y=62.00, z=135.50], EntityVillager['Aim6'/199994, l='MpServer', x=169.50, y=72.50, z=134.50], EntityOtherPlayerMP['Hocro_NA'/252007, l='MpServer', x=212.10, y=61.65, z=162.54], EntitySheep['Sheep'/251720, l='MpServer', x=191.91, y=62.00, z=189.78], EntitySheep['Sheep'/251744, l='MpServer', x=190.81, y=62.00, z=185.44], EntityOtherPlayerMP['Hocro_NA'/252007, l='MpServer', x=186.70, y=62.82, z=164.63], EntityVillager['Aim3'/164971, l='MpServer', x=179.50, y=62.00, z=134.50], EntityZombie['KnockBack2'/112, l='MpServer', x=158.50, y=62.00, z=172.50], EntityZombie['KnockBack1'/113, l='MpServer', x=161.50, y=62.00, z=168.50], EntityZombie['NormalKnockBack'/114, l='MpServer', x=161.50, y=62.00, z=176.50], EntityVillager['DamageTest2'/115, l='MpServer', x=169.50, y=62.00, z=174.50], EntityVillager['DamageTest1'/116, l='MpServer', x=169.50, y=62.00, z=168.50], EntityArmorStand['§6Nofall/Fly/Glide'/117, l='MpServer', x=214.50, y=65.66, z=140.50], EntityArmorStand['§6AntiCactus'/118, l='MpServer', x=215.50, y=65.66, z=156.50], EntityArmorStand['§6Step'/120, l='MpServer', x=208.50, y=65.66, z=140.50], EntityArmorStand['§6Longjump'/121, l='MpServer', x=214.50, y=65.66, z=119.50], EntityOtherPlayerMP['KhakiLon'/252083, l='MpServer', x=166.88, y=62.00, z=168.56], EntityArmorStand['§6Fastladder'/124, l='MpServer', x=208.50, y=65.66, z=180.50], EntityArmorStand['§6Jesus'/125, l='MpServer', x=214.50, y=65.66, z=188.50], EntityArmorStand['§6Esp'/126, l='MpServer', x=208.50, y=65.66, z=199.50], EntityArmorStand['§6KillauraAimTest 1'/127, l='MpServer', x=190.50, y=65.66, z=170.50], EntityArmorStand['§6KillauraAimTest 2'/128, l='MpServer', x=179.50, y=65.66, z=170.50], EntityArmorStand['§6KillauraSwitchTest'/129, l='MpServer', x=189.50, y=65.66, z=186.50], EntityArmorStand['§6KillauraMultiTest1'/130, l='MpServer', x=179.50, y=65.66, z=186.50], EntityArmorStand['§6Velocity'/131, l='MpServer', x=155.50, y=65.66, z=165.50], EntityArmorStand['§6KillauraMultiTest3'/132, l='MpServer', x=159.50, y=65.66, z=152.50], EntityArmorStand['§6KillauraMultiTest2'/133, l='MpServer', x=144.50, y=65.66, z=152.50], EntityArmorStand['§6KillauraWallTest'/134, l='MpServer', x=181.50, y=65.66, z=139.50], EntityArmorStand['§6AntiFire'/135, l='MpServer', x=215.50, y=65.66, z=168.50], EntityArmorStand['§6Jesus-Lava ver.'/136, l='MpServer', x=214.50, y=65.66, z=226.50], EntityArmorStand['§6KillauraMultiTest4'/138, l='MpServer', x=147.50, y=65.66, z=139.50], EntityArmorStand['§6Void'/140, l='MpServer', x=200.50, y=65.66, z=201.50], EntityArmorStand['§6Misc'/141, l='MpServer', x=208.50, y=65.66, z=226.50], EntityArmorStand['§6DamageTest'/142, l='MpServer', x=169.50, y=65.66, z=165.50], EntityArmorStand['§6Snow'/143, l='MpServer', x=207.50, y=65.66, z=156.50], EntityArmorStand['§6TNTBlock'/147, l='MpServer', x=151.50, y=65.66, z=182.50], EntityArmorStand['§6PVP'/148, l='MpServer', x=181.50, y=65.66, z=160.50], EntityOtherPlayerMP['Hocro_NA'/252007, l='MpServer', x=204.72, y=61.66, z=163.06], EntityVillager['Aim5'/199839, l='MpServer', x=191.50, y=65.00, z=134.50], EntityOtherPlayerMP['Hocro_NA'/252007, l='MpServer', x=186.70, y=62.82, z=164.63], EntitySheep['Sheep'/237990, l='MpServer', x=155.50, y=61.00, z=150.50], EntityOtherPlayerMP['Hocro_NA'/252007, l='MpServer', x=206.91, y=63.22, z=163.41], EntitySheep['Sheep'/251560, l='MpServer', x=188.44, y=62.00, z=185.34], EntitySheep['Sheep'/251827, l='MpServer', x=187.97, y=62.00, z=184.13], EntityOtherPlayerMP['KhakiLon'/252083, l='MpServer', x=166.88, y=62.00, z=168.56], EntitySheep['Sheep'/238017, l='MpServer', x=155.50, y=61.00, z=153.50], EntitySheep['Sheep'/251840, l='MpServer', x=186.16, y=62.00, z=185.72], EntitySheep['Sheep'/238026, l='MpServer', x=155.50, y=61.00, z=154.50], EntitySheep['Sheep'/251607, l='MpServer', x=188.53, y=62.00, z=188.94], EntityVillager['Aim4'/132570, l='MpServer', x=185.50, y=62.00, z=134.50], EntityPig['Pig'/238047, l='MpServer', x=142.56, y=60.00, z=156.44], EntityPig['Pig'/238051, l='MpServer', x=148.53, y=60.00, z=154.23], EntityPig['Pig'/238050, l='MpServer', x=146.41, y=60.00, z=156.53], EntityOtherPlayerMP['arzpy'/252077, l='MpServer', x=207.69, y=62.00, z=166.69], EntityPig['Pig'/238049, l='MpServer', x=145.16, y=60.00, z=156.53], EntityPig['Pig'/238048, l='MpServer', x=141.44, y=60.00, z=151.31], EntityPig['Pig'/238055, l='MpServer', x=143.66, y=60.00, z=152.66], EntityPig['Pig'/238054, l='MpServer', x=141.53, y=60.00, z=149.44], EntityPig['Pig'/238053, l='MpServer', x=144.13, y=60.00, z=156.53], EntityPig['Pig'/238052, l='MpServer', x=144.61, y=60.00, z=153.73], EntityPig['Pig'/238059, l='MpServer', x=145.69, y=60.00, z=151.69], EntityPig['Pig'/238058, l='MpServer', x=140.44, y=60.00, z=152.06], EntityPig['Pig'/238057, l='MpServer', x=146.21, y=60.00, z=155.34], EntityPig['Pig'/238056, l='MpServer', x=142.63, y=60.00, z=155.28], EntityPig['Pig'/238062, l='MpServer', x=144.59, y=60.00, z=150.34], EntityOtherPlayerMP['Hocro_NA'/252007, l='MpServer', x=202.33, y=62.80, z=161.91], EntityPig['Pig'/238061, l='MpServer', x=140.44, y=60.00, z=153.26], EntitySheep['Sheep'/251885, l='MpServer', x=186.06, y=62.00, z=187.44], EntityPig['Pig'/238060, l='MpServer', x=142.47, y=60.00, z=153.58], EntityPig['Pig'/238067, l='MpServer', x=146.22, y=60.00, z=153.03], EntityPig['Pig'/238066, l='MpServer', x=142.53, y=60.00, z=150.41], EntityPig['Pig'/238065, l='MpServer', x=147.50, y=60.00, z=154.03], EntityPig['Pig'/238064, l='MpServer', x=146.09, y=60.00, z=148.44], EntityPig['Pig'/238071, l='MpServer', x=142.66, y=60.00, z=148.44], EntityPig['Pig'/238070, l='MpServer', x=143.44, y=60.00, z=151.41], EntityPig['Pig'/238069, l='MpServer', x=144.00, y=60.00, z=148.44], EntityOtherPlayerMP['arzpy'/252077, l='MpServer', x=204.26, y=62.00, z=166.13], EntityOtherPlayerMP['Hocro_NA'/252007, l='MpServer', x=203.54, y=63.07, z=162.52], EntityOtherPlayerMP['Hocro_NA'/252007, l='MpServer', x=207.28, y=62.75, z=149.19], EntityPig['Pig'/238068, l='MpServer', x=148.53, y=60.00, z=152.90], EntityPig['Pig'/238075, l='MpServer', x=140.50, y=60.00, z=150.44], EntityPig['Pig'/238072, l='MpServer', x=145.01, y=60.00, z=154.68], EntityPig['Pig'/238078, l='MpServer', x=146.18, y=60.00, z=154.30], EntityPig['Pig'/238077, l='MpServer', x=144.42, y=60.00, z=151.41], EntitySheep['Sheep'/251901, l='MpServer', x=188.69, y=62.00, z=186.41], EntityPig['Pig'/238076, l='MpServer', x=145.00, y=60.00, z=155.28]]
+	Retry entities: 0 total; []
+	Server brand: FlameCord <- TestServer§r
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:393)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2675)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:413)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:95)
+	at GradleStart.main(GradleStart.java:24)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_332, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Amazon.com Inc.
+	Memory: 98450624 bytes (93 MB) / 858783744 bytes (819 MB) up to 1413480448 bytes (1348 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.19 Powered by Forge 11.15.1.2318 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJA	Forge{11.15.1.2318} [Minecraft Forge] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJA	sunrise{1.0.0} [Sunrise Client] (main) 
+	Loaded coremods (and transformers): 
+DevAuthLoadingPlugin (DevAuth-forge-legacy-0.3.jar)
+  me.djtheredstoner.devauth.forge.legacy.ClassTransformer
+	GL info: ' Vendor: 'ATI Technologies Inc.' Version: '4.6.14761 Compatibility Profile Context 21.30.44 30.0.13044.0' Renderer: 'AMD Radeon(TM) Vega 8 Graphics '
+	Launched Version: 1.8.9
+	LWJGL: 2.9.4
+	OpenGL: AMD Radeon(TM) Vega 8 Graphics  GL version 4.6.14761 Compatibility Profile Context 21.30.44 30.0.13044.0, ATI Technologies Inc.
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: !                §9Dreary.zip
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 8x AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx 

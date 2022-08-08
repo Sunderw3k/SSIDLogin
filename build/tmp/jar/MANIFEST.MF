@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+ModSide: CLIENT
+MixinConfigs: mixins.ssidlogin.json
+TweakClass: org.spongepowered.asm.launch.MixinTweaker
+ForceLoadAsMod: true
+

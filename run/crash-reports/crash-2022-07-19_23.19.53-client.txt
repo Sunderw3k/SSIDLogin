@@ -1,0 +1,145 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  DevAuthLoadingPlugin (DevAuth-forge-legacy-0.3.jar)
+Contact their authors BEFORE contacting forge
+
+// I let you down. Sorry :(
+
+Time: 7/19/22 11:19 PM
+Description: Ticking entity
+
+java.lang.NoClassDefFoundError: net/sunderw/sunrise/utils/RaycastUtils
+	at net.sunderw.ssidlogin.modules.combat.KillAura.onMotionEvent(KillAura.java:86)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_19_KillAura_onMotionEvent_Pre.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraft.client.entity.EntityPlayerSP.handler$onUpdateWalkingPlayerPRE$zzd000(EntityPlayerSP.java:1006)
+	at net.minecraft.client.entity.EntityPlayerSP.onUpdateWalkingPlayer(EntityPlayerSP.java)
+	at net.minecraft.client.entity.EntityPlayerSP.onUpdate(EntityPlayerSP.java:172)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2011)
+	at net.minecraft.world.World.updateEntity(World.java:1976)
+	at net.minecraft.world.World.updateEntities(World.java:1805)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2199)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1100)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:384)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:95)
+	at GradleStart.main(GradleStart.java:24)
+Caused by: java.lang.ClassNotFoundException: net.sunderw.ssidlogin.utils.RaycastUtils
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:101)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 26 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.sunderw.ssidlogin.modules.combat.KillAura.onMotionEvent(KillAura.java:86)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_19_KillAura_onMotionEvent_Pre.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraft.client.entity.EntityPlayerSP.handler$onUpdateWalkingPlayerPRE$zzd000(EntityPlayerSP.java:1006)
+	at net.minecraft.client.entity.EntityPlayerSP.onUpdateWalkingPlayer(EntityPlayerSP.java)
+	at net.minecraft.client.entity.EntityPlayerSP.onUpdate(EntityPlayerSP.java:172)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2011)
+	at net.minecraft.world.World.updateEntity(World.java:1976)
+
+-- Entity being ticked --
+Details:
+	Entity Type: null (net.minecraft.client.entity.EntityPlayerSP)
+	Entity ID: 11966
+	Entity Name: Ad4rianFL
+	Entity's Exact location: -11.23, 66.50, 68.46
+	Entity's Block location: -12.00,66.00,68.00 - World: (-12,66,68), Chunk: (at 4,4,4 in -1,4; contains blocks -16,0,64 to -1,255,79), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Entity's Momentum: 0.12, -0.08, 0.11
+	Entity's Rider: ~~ERROR~~ NullPointerException: null
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:1805)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 7 total; [EntityPlayerSP['Ad4rianFL'/11966, l='MpServer', x=-11.23, y=66.50, z=68.46], EntityOtherPlayerMP['Rodri_Pro_X'/11949, l='MpServer', x=-91.06, y=67.00, z=-11.19], EntityOtherPlayerMP['vvvc'/12044, l='MpServer', x=-10.60, y=63.01, z=69.86], EntityOtherPlayerMP['farouklee_'/12106, l='MpServer', x=47.88, y=63.00, z=7.84], EntityOtherPlayerMP['AstroChip_'/12168, l='MpServer', x=-62.50, y=77.00, z=7.50], EntityOtherPlayerMP['Mr_Flexie'/12171, l='MpServer', x=-6.30, y=67.13, z=24.47], EntityOtherPlayerMP['MOHAMED300XX'/12152, l='MpServer', x=25.48, y=66.49, z=-15.78]]
+	Chunk stats: MultiplayerChunkCache: 437, 437
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: -10.00,78.00,-18.00 - World: (-10,78,-18), Chunk: (at 6,4,14 in -1,-2; contains blocks -16,0,-32 to -1,255,-17), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Level time: 526268558 game time, 6000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: adventure (ID 2). Hardcore: false. Cheats: false
+	Forced entities: 23 total; [EntityOtherPlayerMP['Rodri_Pro_X'/11949, l='MpServer', x=-91.06, y=67.00, z=-11.19], EntityPlayerSP['Ad4rianFL'/11966, l='MpServer', x=-11.23, y=66.50, z=68.46], EntityOtherPlayerMP['AstroChip_'/12168, l='MpServer', x=-62.50, y=77.00, z=7.50], EntityOtherPlayerMP['MLgom'/12070, l='MpServer', x=-57.50, y=67.50, z=-47.72], EntityOtherPlayerMP['yoseef99888'/12047, l='MpServer', x=-8.38, y=201.06, z=-25.08], EntityOtherPlayerMP['vvvc'/12044, l='MpServer', x=-10.60, y=63.01, z=69.86], EntityArmorStand['§a02:32'/13062, l='MpServer', x=38.50, y=64.06, z=6.50], EntityOtherPlayerMP['Ahmedx900'/11871, l='MpServer', x=-16.28, y=200.00, z=-15.94], EntityOtherPlayerMP['Mr_Flexie'/12171, l='MpServer', x=-6.30, y=67.13, z=24.47], EntityOtherPlayerMP['AstroChip_'/12168, l='MpServer', x=-62.50, y=77.00, z=7.50], EntityOtherPlayerMP['TTerTIXS'/12098, l='MpServer', x=-5.91, y=200.00, z=-22.75], EntityOtherPlayerMP['farouklee_'/12106, l='MpServer', x=47.88, y=63.00, z=7.84], EntityOtherPlayerMP['2HYP'/12075, l='MpServer', x=32.42, y=67.00, z=-42.68], EntityOtherPlayerMP['Mr_Flexie'/12171, l='MpServer', x=-6.30, y=67.13, z=24.47], EntityOtherPlayerMP['vvvc'/12044, l='MpServer', x=-10.60, y=63.01, z=69.86], EntityOtherPlayerMP['Rodri_Pro_X'/11949, l='MpServer', x=-91.06, y=67.00, z=-11.19], EntityOtherPlayerMP['farouklee_'/12106, l='MpServer', x=47.88, y=63.00, z=7.84], EntityArmorStand['§a02:32'/12973, l='MpServer', x=-28.50, y=68.06, z=43.50], EntityOtherPlayerMP['MOHAMED300XX'/12152, l='MpServer', x=25.48, y=66.49, z=-15.78], EntityArmorStand['§a02:32'/12982, l='MpServer', x=-2.50, y=68.06, z=61.50], EntityOtherPlayerMP['MOHAMED300XX'/12152, l='MpServer', x=25.48, y=66.49, z=-15.78], EntityOtherPlayerMP['MOHAMED300XX'/12152, l='MpServer', x=-3.72, y=200.00, z=-15.69], EntityArmorStand['§a02:32'/13182, l='MpServer', x=50.50, y=64.06, z=6.50]]
+	Retry entities: 0 total; []
+	Server brand: FlameCord <- BlocksMC
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:393)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2675)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:405)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:95)
+	at GradleStart.main(GradleStart.java:24)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_332, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Amazon.com Inc.
+	Memory: 290740568 bytes (277 MB) / 1027080192 bytes (979 MB) up to 1413480448 bytes (1348 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	FML: MCP 9.19 Powered by Forge 11.15.1.2318 5 mods loaded, 5 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJA	Forge{11.15.1.2318} [Minecraft Forge] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJA	sunrise{1.0.0} [Sunrise Client] (main) 
+	UCHIJA	ias{7.1.3.1} [In-Game Account Switcher] (InGameAccountSwitcher-Forge-1.8.9-7.1.3.1.jar) 
+	Loaded coremods (and transformers): 
+DevAuthLoadingPlugin (DevAuth-forge-legacy-0.3.jar)
+  me.djtheredstoner.devauth.forge.legacy.ClassTransformer
+	GL info: ' Vendor: 'ATI Technologies Inc.' Version: '4.6.14761 Compatibility Profile Context 21.30.44 30.0.13044.0' Renderer: 'AMD Radeon(TM) Vega 8 Graphics '
+	Launched Version: 1.8.9
+	LWJGL: 2.9.4
+	OpenGL: AMD Radeon(TM) Vega 8 Graphics  GL version 4.6.14761 Compatibility Profile Context 21.30.44 30.0.13044.0, ATI Technologies Inc.
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: !                §9Dreary.zip
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 8x AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx 

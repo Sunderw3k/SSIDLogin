@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SSIDLogin.iml" filepath="$PROJECT_DIR$/.idea/modules/SSIDLogin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SSIDLogin.api.iml" filepath="$PROJECT_DIR$/.idea/modules/SSIDLogin.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SSIDLogin.main.iml" filepath="$PROJECT_DIR$/.idea/modules/SSIDLogin.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SSIDLogin.test.iml" filepath="$PROJECT_DIR$/.idea/modules/SSIDLogin.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Sunrise8.api.iml" filepath="$PROJECT_DIR$/.idea/modules/Sunrise8.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Sunrise8.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Sunrise8.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Sunrise8.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Sunrise8.test.iml" />
+    </modules>
+  </component>
+</project>

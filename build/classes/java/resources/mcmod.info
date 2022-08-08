@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "{id}",
+    "name": "${name}",
+    "description": "Used to login with SSID's",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "updateUrl": "",
+    "authorList": ["Sunderw_3k"],
+    "credits": "Some chinese dude lol",
+    "logoFile": "assets/dungeonrooms/logo.png",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

@@ -1,0 +1,124 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  DevAuthLoadingPlugin (DevAuth-forge-legacy-0.3.jar)
+Contact their authors BEFORE contacting forge
+
+// Shall we play a game?
+
+Time: 8/8/22 12:02 AM
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+	at net.sunderw.ssidlogin.modules.misc.RankFinder.lambda$onRenderGameOverlayEvent$2(RankFinder.java:28)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at net.sunderw.ssidlogin.modules.misc.RankFinder.onRenderGameOverlayEvent(RankFinder.java:27)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_10_RankFinder_onRenderGameOverlayEvent_Chat.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.client.GuiIngameForge.renderChat(GuiIngameForge.java:766)
+	at net.minecraftforge.client.GuiIngameForge.renderGameOverlay(GuiIngameForge.java:172)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1137)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1127)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:384)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:95)
+	at GradleStart.main(GradleStart.java:24)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.sunderw.ssidlogin.modules.misc.RankFinder.lambda$onRenderGameOverlayEvent$2(RankFinder.java:28)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at net.sunderw.ssidlogin.modules.misc.RankFinder.onRenderGameOverlayEvent(RankFinder.java:27)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_10_RankFinder_onRenderGameOverlayEvent_Chat.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.client.GuiIngameForge.renderChat(GuiIngameForge.java:766)
+	at net.minecraftforge.client.GuiIngameForge.renderGameOverlay(GuiIngameForge.java:172)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 2 total; [EntityPlayerSP['Sun_derw3k'/5489643, l='MpServer', x=26.91, y=60.00, z=13.91], EntityOtherPlayerMP['wodkajestmoja'/5487398, l='MpServer', x=38.53, y=60.25, z=42.38]]
+	Chunk stats: MultiplayerChunkCache: 289, 289
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 32.00,60.00,8.00 - World: (32,60,8), Chunk: (at 0,3,8 in 2,0; contains blocks 32,0,0 to 47,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 1549120276 game time, 5000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 184 total; [EntityOtherPlayerMP['niganigaczek'/5490915, l='MpServer', x=-9.48, y=57.72, z=12.44], EntityArmorStand['Armor Stand'/13, l='MpServer', x=-10.59, y=51.28, z=-14.13], EntityArmorStand['Armor Stand'/14, l='MpServer', x=-10.56, y=51.00, z=-8.19], EntityArmorStand['Armor Stand'/15, l='MpServer', x=-15.53, y=47.50, z=3.81], EntityArmorStand['Armor Stand'/16, l='MpServer', x=-12.50, y=58.00, z=0.50], EntityArmorStand['Armor Stand'/17, l='MpServer', x=-13.50, y=58.00, z=4.50], EntityArmorStand['Armor Stand'/18, l='MpServer', x=-13.47, y=58.00, z=8.47], EntityArmorStand['Armor Stand'/19, l='MpServer', x=-13.50, y=58.00, z=12.50], EntityArmorStand['Armor Stand'/20, l='MpServer', x=-12.50, y=58.00, z=16.41], EntityArmorStand['Armor Stand'/24, l='MpServer', x=4.78, y=52.50, z=-17.50], EntityArmorStand['Armor Stand'/25, l='MpServer', x=8.63, y=80.66, z=-1.56], EntityArmorStand['Armor Stand'/26, l='MpServer', x=10.50, y=52.50, z=10.81], EntityArmorStand['Armor Stand'/30, l='MpServer', x=23.19, y=53.50, z=-4.50], EntitySheep['Sheep'/31, l='MpServer', x=23.53, y=67108863.97, z=29.56], EntitySheep['Sheep'/32, l='MpServer', x=28.44, y=67108863.97, z=43.06], EntityArmorStand['Armor Stand'/35, l='MpServer', x=40.22, y=82.50, z=2.47], EntityCreeper['Creeper'/38, l='MpServer', x=48.03, y=82.00, z=22.50], EntityArmorStand['§e§lWyzwanie Parkour'/49, l='MpServer', x=28.50, y=64.47, z=-9.50], EntityArmorStand['§bKoniec'/50, l='MpServer', x=28.50, y=64.19, z=-9.50], EntityArmorStand['§e§lWyzwanie Parkour'/51, l='MpServer', x=27.50, y=58.47, z=28.50], EntityArmorStand['§bStart'/52, l='MpServer', x=27.50, y=58.19, z=28.50], EntityArmorStand['Armor Stand'/53, l='MpServer', x=16.00, y=63.47, z=31.00], EntityWither['§d§l58§r §d§lGRACZY§r §b§lNA§r §b§lTRYBIE§r §a§lBED§r §a§lWARS!'/54, l='MpServer', x=27.91, y=49.38, z=-7.88], EntityArmorStand['Armor Stand'/75, l='MpServer', x=-0.50, y=63.44, z=-11.50], EntityArmorStand['Armor Stand'/587, l='MpServer', x=16.00, y=64.84, z=31.00], EntityItem['item.item.bed'/76, l='MpServer', x=-0.50, y=63.44, z=-11.50], EntityItem['item.item.bootsDiamond'/588, l='MpServer', x=16.00, y=64.84, z=31.00], EntityArmorStand['§d§lTOPKA LOZEK'/77, l='MpServer', x=-0.50, y=62.69, z=-11.50], EntityArmorStand['§d§lRANKING PARKOUR'/589, l='MpServer', x=16.00, y=64.09, z=31.00], EntityArmorStand['§7Twoj wynik: 6'/79, l='MpServer', x=-0.50, y=62.38, z=-11.50], EntityArmorStand['§7Twoj wynik: Brak'/591, l='MpServer', x=16.00, y=63.78, z=31.00], EntityArmorStand['Armor Stand'/81, l='MpServer', x=-0.50, y=62.09, z=-11.50], EntityArmorStand['Armor Stand'/593, l='MpServer', x=16.00, y=63.50, z=31.00], EntityArmorStand['§e#1 §7iDarkBoyy §f(4185)'/83, l='MpServer', x=-0.50, y=61.78, z=-11.50], EntityArmorStand['§a§lChcesz sie tutaj znalezc?'/595, l='MpServer', x=16.00, y=60.00, z=31.00], EntityArmorStand['§6#2 §7matixpl1okok §f(3764)'/85, l='MpServer', x=-0.50, y=61.50, z=-11.50], EntityArmorStand['§b§lPokaz swoje umiejetnosci Parkour!'/597, l='MpServer', x=16.00, y=59.69, z=31.00], EntityArmorStand['§c#3 §7slxshz §f(3369)'/87, l='MpServer', x=-0.50, y=61.19, z=-11.50], EntityArmorStand['§a§lDwójki'/599, l='MpServer', x=-13.50, y=60.69, z=8.50], EntityArmorStand['§7#4 §7Polska_PL §f(3171)'/89, l='MpServer', x=-0.50, y=60.88, z=-11.50], EntityArmorStand['§fW grze: §d50 §fgraczy'/601, l='MpServer', x=-13.50, y=60.38, z=8.50], EntityArmorStand['§7#5 §7itslukxszz §f(3140)'/91, l='MpServer', x=-0.50, y=60.59, z=-11.50], EntityArmorStand['§b➠ Kliknij, aby zagrac!'/603, l='MpServer', x=-13.50, y=60.09, z=8.50], EntityArmorStand['§7#6 §7_MaYo_ §f(2853)'/93, l='MpServer', x=-0.50, y=60.28, z=-11.50], EntityArmorStand['§7#7 §7KRYPTOGEJ §f(2829)'/95, l='MpServer', x=-0.50, y=60.00, z=-11.50], EntityArmorStand['§7#8 §7CabantiX_2 §f(2511)'/97, l='MpServer', x=-0.50, y=59.69, z=-11.50], EntityArmorStand['§7#9 §7Piotr01 §f(2317)'/99, l='MpServer', x=-0.50, y=59.38, z=-11.50], EntityArmorStand['§7#10 §7dragvandil §f(2283)'/101, l='MpServer', x=-0.50, y=59.09, z=-11.50], EntityArmorStand['Armor Stand'/103, l='MpServer', x=-0.50, y=58.78, z=-11.50], EntityArmorStand['§a§lKliknij, aby przelaczyc!'/105, l='MpServer', x=-0.50, y=58.50, z=-11.50], EntityArmorStand['§b§lLacznie§7 / Dzisiaj§7 / Tydzien§7 / §7Miesiac'/107, l='MpServer', x=-0.50, y=58.19, z=-11.50], EntityArmorStand['Armor Stand'/1160, l='MpServer', x=-4.50, y=63.44, z=28.50], EntityItem['item.tile.blockEmerald'/1161, l='MpServer', x=-4.50, y=63.44, z=28.50], EntityArmorStand['§d§lTYGODNIOWY EVENT'/1162, l='MpServer', x=-4.50, y=62.69, z=28.50], EntityArmorStand['§7Twoj wynik: 6'/1164, l='MpServer', x=-4.50, y=62.38, z=28.50], EntityArmorStand['Armor Stand'/1166, l='MpServer', x=-4.50, y=62.09, z=28.50], EntityArmorStand['§e#1 §7mohel (529) §f(30 zl)'/1168, l='MpServer', x=-4.50, y=61.78, z=28.50], EntityOtherPlayerMP['wodkajestmoja'/5487398, l='MpServer', x=38.53, y=60.25, z=42.38], EntityArmorStand['§6#2 §7debilizm (356) §f(28 zl)'/1170, l='MpServer', x=-4.50, y=61.50, z=28.50], EntityArmorStand['§c#3 §7_Mar_cin_ (281) §f(26 zl)'/1172, l='MpServer', x=-4.50, y=61.19, z=28.50], EntityArmorStand['§7#4 §7slxshz (239) §f(24 zl)'/1174, l='MpServer', x=-4.50, y=60.88, z=28.50], EntityArmorStand['§7#5 §7kbnk (238) §f(22 zl)'/1176, l='MpServer', x=-4.50, y=60.59, z=28.50], EntityOtherPlayerMP['wodkajestmoja'/5487398, l='MpServer', x=37.76, y=61.13, z=50.09], EntityArmorStand['§7#6 §7sylwo123 (215) §f(20 zl)'/1178, l='MpServer', x=-4.50, y=60.28, z=28.50], EntityArmorStand['§7#7 §7AliBeanz (211) §f(18 zl)'/1180, l='MpServer', x=-4.50, y=60.00, z=28.50], EntityArmorStand['§7#8 §7radijo (204) §f(16 zl)'/1182, l='MpServer', x=-4.50, y=59.69, z=28.50], EntityArmorStand['§7#9 §7HypeShanon (179) §f(14 zl)'/1184, l='MpServer', x=-4.50, y=59.38, z=28.50], EntityArmorStand['§7#10 §7ZiomalAK00 (178) §f(12 zl)'/1186, l='MpServer', x=-4.50, y=59.09, z=28.50], EntityArmorStand['Armor Stand'/1188, l='MpServer', x=-4.50, y=58.78, z=28.50], EntityArmorStand['§a§lWylosowano: Topka Lozek'/1190, l='MpServer', x=-4.50, y=58.50, z=28.50], EntityArmorStand['§b§lDoladowania nadawane sa co srode!'/1192, l='MpServer', x=-4.50, y=58.19, z=28.50], EntityArmorStand['§a§l4v4v4v4'/211, l='MpServer', x=-13.50, y=60.69, z=4.50], EntityArmorStand['§fW grze: §d4 §fgraczy'/213, l='MpServer', x=-13.50, y=60.38, z=4.50], EntityArmorStand['§b➠ Kliknij, aby zagrac!'/215, l='MpServer', x=-13.50, y=60.09, z=4.50], EntityArmorStand['Armor Stand'/217, l='MpServer', x=4.50, y=63.44, z=-11.50], EntityItem['item.item.appleGold'/218, l='MpServer', x=4.50, y=63.44, z=-11.50], EntityArmorStand['§d§lTOPKA WYGRANYCH'/219, l='MpServer', x=4.50, y=62.69, z=-11.50], EntityArmorStand['§7Twoj wynik: 1'/221, l='MpServer', x=4.50, y=62.38, z=-11.50], EntityArmorStand['Armor Stand'/223, l='MpServer', x=4.50, y=62.09, z=-11.50], EntityArmorStand['§e#1 §7iDarkBoyy §f(1074)'/225, l='MpServer', x=4.50, y=61.78, z=-11.50], EntityArmorStand['§6#2 §7Polska_PL §f(975)'/227, l='MpServer', x=4.50, y=61.50, z=-11.50], EntityArmorStand['§c#3 §7KRYPTOGEJ §f(877)'/229, l='MpServer', x=4.50, y=61.19, z=-11.50], EntityArmorStand['§7#4 §7slxshz §f(842)'/231, l='MpServer', x=4.50, y=60.88, z=-11.50], EntityArmorStand['§7#5 §7xzter §f(754)'/233, l='MpServer', x=4.50, y=60.59, z=-11.50], EntityArmorStand['§7#6 §7itslukxszz §f(753)'/235, l='MpServer', x=4.50, y=60.28, z=-11.50], EntityArmorStand['§7#7 §7matixpl1okok §f(737)'/237, l='MpServer', x=4.50, y=60.00, z=-11.50], EntityArmorStand['§7#8 §7siostraPaulina §f(700)'/239, l='MpServer', x=4.50, y=59.69, z=-11.50], EntityArmorStand['§7#9 §7Piotr01 §f(662)'/241, l='MpServer', x=4.50, y=59.38, z=-11.50], EntityArmorStand['§7#10 §7dragvandil §f(635)'/243, l='MpServer', x=4.50, y=59.09, z=-11.50], EntityArmorStand['Armor Stand'/245, l='MpServer', x=4.50, y=58.78, z=-11.50], EntityArmorStand['§a§lKliknij, aby przelaczyc!'/247, l='MpServer', x=4.50, y=58.50, z=-11.50], EntityArmorStand['§b§lLacznie§7 / Dzisiaj§7 / Tydzien§7 / §7Miesiac'/249, l='MpServer', x=4.50, y=58.19, z=-11.50], EntityOtherPlayerMP['CerealCase34525'/5489820, l='MpServer', x=-11.03, y=57.70, z=9.65], EntityOtherPlayerMP['Uchiha'/5490012, l='MpServer', x=-11.90, y=58.00, z=8.43], EntityPlayerSP['Sun_derw3k'/5489643, l='MpServer', x=26.91, y=60.00, z=13.91], EntityOtherPlayerMP['wodkajestmoja'/5487398, l='MpServer', x=38.50, y=60.00, z=45.32], EntityOtherPlayerMP['wodkajestmoja'/5487398, l='MpServer', x=38.18, y=61.13, z=49.32], EntityOtherPlayerMP['HypeShanon'/5422429, l='MpServer', x=-4.56, y=61.32, z=9.34], EntityArmorStand['§6MVP§5++§6'/153414, l='MpServer', x=17.50, y=58.75, z=-8.50], EntityArmorStand['§6MVP§4++§6'/129865, l='MpServer', x=11.50, y=77.75, z=-9.50], EntityArmorStand['§aAlchemiko'/129867, l='MpServer', x=11.50, y=77.44, z=-9.50], EntityArmorStand['§aKocham_Dziadka'/153416, l='MpServer', x=17.50, y=58.44, z=-8.50], EntityArmorStand['§6MVP§3++§6'/151899, l='MpServer', x=12.50, y=58.75, z=28.50], EntityArmorStand['§aAliBeanz'/151901, l='MpServer', x=12.50, y=58.44, z=28.50], EntityArmorStand['§a§lDuels'/353, l='MpServer', x=-12.50, y=60.69, z=16.50], EntityArmorStand['§fW grze: §d0 §fgraczy'/355, l='MpServer', x=-12.50, y=60.38, z=16.50], EntityArmorStand['§b➠ Kliknij, aby zagrac!'/357, l='MpServer', x=-12.50, y=60.09, z=16.50], EntityArmorStand['Armor Stand'/359, l='MpServer', x=28.50, y=64.03, z=16.50], EntityItem['item.item.diamond'/360, l='MpServer', x=28.50, y=64.03, z=16.50], EntityArmorStand['§a§lCODZIENNA NAGRODA'/361, l='MpServer', x=28.50, y=63.28, z=16.50], EntityArmorStand['§fDostepne Nagrody: §b1'/363, l='MpServer', x=28.50, y=63.00, z=16.50], EntityArmorStand['§fOdbieraj kazdego dnia!'/365, l='MpServer', x=28.50, y=62.69, z=16.50], EntityArmorStand['§b➠ Kliknij, aby otworzyc!'/367, l='MpServer', x=28.50, y=62.38, z=16.50], EntityArmorStand['Armor Stand'/369, l='MpServer', x=28.50, y=59.53, z=16.50], EntityEnderman['Enderman'/370, l='MpServer', x=28.50, y=59.53, z=16.50], EntityArmorStand['Armor Stand'/371, l='MpServer', x=9.50, y=61.63, z=24.50], EntityItem['item.item.netherStar'/372, l='MpServer', x=9.50, y=61.63, z=24.50], EntityArmorStand['§a§lKLASY BED WARS'/373, l='MpServer', x=9.50, y=60.88, z=24.50], EntityArmorStand['§3§9POMOCNY'/129396, l='MpServer', x=-16.50, y=57.75, z=25.50], EntityOtherPlayerMP['wodkajestmoja'/5487398, l='MpServer', x=38.53, y=60.25, z=42.38], EntityArmorStand['§fOdblokowane klasy: §6Wkrotce!'/375, l='MpServer', x=9.50, y=60.28, z=24.50], EntityArmorStand['§aKewiPL'/129398, l='MpServer', x=-16.50, y=57.44, z=25.50], EntityArmorStand['§fAktualna klasa: §dWkrotce!'/377, l='MpServer', x=9.50, y=60.00, z=24.50], EntityArmorStand['§fOdblokuj klasy postaci i ciesz...'/379, l='MpServer', x=9.50, y=59.38, z=24.50], EntityArmorStand['§f... sie nimi na prywatnych arenach!'/381, l='MpServer', x=9.50, y=59.09, z=24.50], EntityArmorStand['§b➠ Kliknij, aby otworzyc!'/383, l='MpServer', x=9.50, y=58.50, z=24.50], EntityArmorStand['Armor Stand'/385, l='MpServer', x=9.50, y=56.84, z=24.50], EntityCow['Cow'/386, l='MpServer', x=9.50, y=56.84, z=24.50], EntityArmorStand['Armor Stand'/387, l='MpServer', x=28.50, y=64.03, z=0.50], EntityItem['item.item.carrotGolden'/388, l='MpServer', x=28.50, y=64.03, z=0.50], EntityArmorStand['§a§lSKLEPIKARZ SERWEROWY'/389, l='MpServer', x=28.50, y=63.28, z=0.50], EntityArmorStand['§fRangi, doladowania, przedmioty, ...'/391, l='MpServer', x=28.50, y=63.00, z=0.50], EntityArmorStand['§f... paczki monet i wiele wiecej!'/393, l='MpServer', x=28.50, y=62.69, z=0.50], EntityArmorStand['§b➠ Kliknij, aby otworzyc!'/395, l='MpServer', x=28.50, y=62.38, z=0.50], EntityArmorStand['Armor Stand'/397, l='MpServer', x=28.50, y=60.28, z=0.50], EntityWitch['Witch'/398, l='MpServer', x=28.50, y=60.28, z=0.50], EntityArmorStand['§a§lPrywatne'/399, l='MpServer', x=-12.50, y=60.69, z=0.50], EntityArmorStand['§fAreny premium'/401, l='MpServer', x=-12.50, y=60.38, z=0.50], EntityArmorStand['§b➠ Kliknij, aby zagrac!'/403, l='MpServer', x=-12.50, y=60.09, z=0.50], EntityArmorStand['Armor Stand'/405, l='MpServer', x=9.50, y=61.94, z=-7.50], EntityItem['item.item.paper'/406, l='MpServer', x=9.50, y=61.94, z=-7.50], EntityArmorStand['§a§lTWOJE STATYSTYKI'/407, l='MpServer', x=9.50, y=61.19, z=-7.50], EntityArmorStand['§fWygrane areny: §61'/409, l='MpServer', x=9.50, y=60.59, z=-7.50], EntityArmorStand['§fZniszczone lozka: §66'/411, l='MpServer', x=9.50, y=60.28, z=-7.50], EntityArmorStand['§fZabojstwa: §610'/413, l='MpServer', x=9.50, y=60.00, z=-7.50], EntityArmorStand['§fWin ratio: §d100 %'/415, l='MpServer', x=9.50, y=59.38, z=-7.50], EntityArmorStand['§e#9 §7Jasiek_YT1§r §f(32.499 sek.)'/5059053, l='MpServer', x=16.00, y=60.84, z=31.00], EntityArmorStand['§fK/D ratio: §d83 %'/417, l='MpServer', x=9.50, y=59.09, z=-7.50], EntityArmorStand['§e#8 §7ogryzek123§r §f(26.929 sek.)'/5059052, l='MpServer', x=16.00, y=61.16, z=31.00], EntityArmorStand['§b➠ Kliknij, aby otworzyc!'/419, l='MpServer', x=9.50, y=58.50, z=-7.50], EntityArmorStand['§e#10 §7BubiStu§r §f(34.599 sek.)'/5059054, l='MpServer', x=16.00, y=60.56, z=31.00], EntityArmorStand['§e#5 §70Elo0§r §f(18.200 sek.)'/5059049, l='MpServer', x=16.00, y=62.00, z=31.00], EntityArmorStand['Armor Stand'/421, l='MpServer', x=9.50, y=56.84, z=-7.50], EntityArmorStand['§e#4 §7kicko_Gaming§r §f(14.438 sek.)'/5059048, l='MpServer', x=16.00, y=62.31, z=31.00], EntitySheep['Sheep'/422, l='MpServer', x=9.50, y=56.84, z=-7.50], EntityArmorStand['§e#7 §7Giluseq§r §f(20.895 sek.)'/5059051, l='MpServer', x=16.00, y=61.44, z=31.00], EntityArmorStand['§a§lSolo'/423, l='MpServer', x=-13.50, y=60.69, z=12.50], EntityArmorStand['§e#6 §7LOSIU§r §f(20.099 sek.)'/5059050, l='MpServer', x=16.00, y=61.72, z=31.00], EntityArmorStand['§e#1 §7KubusPro2013§r §f(2.155 sek.)'/5059045, l='MpServer', x=16.00, y=63.19, z=31.00], EntityArmorStand['§fW grze: §d0 §fgraczy'/425, l='MpServer', x=-13.50, y=60.38, z=12.50], EntityArmorStand['§e#3 §7hlebeg2020§r §f(12.150 sek.)'/5059047, l='MpServer', x=16.00, y=62.59, z=31.00], EntityArmorStand['§b➠ Kliknij, aby zagrac!'/427, l='MpServer', x=-13.50, y=60.09, z=12.50], EntityArmorStand['§e#2 §7VestikPL§r §f(5.818 sek.)'/5059046, l='MpServer', x=16.00, y=62.88, z=31.00], EntityArmorStand['Armor Stand'/429, l='MpServer', x=3.50, y=62.94, z=28.50], EntityItem['item.tile.tnt'/430, l='MpServer', x=3.50, y=62.94, z=28.50], EntityArmorStand['§e§lBED WARS'/431, l='MpServer', x=3.50, y=62.19, z=28.50], EntityArmorStand['§b§lPodstawowe informacje:'/433, l='MpServer', x=3.50, y=61.59, z=28.50], EntityArmorStand['§fWitamy na trybie §e§lBed Wars!'/435, l='MpServer', x=3.50, y=61.00, z=28.50], EntityArmorStand['§fRozrywka polega na §c§lpokonaniu§r wszystkich,'/437, l='MpServer', x=3.50, y=60.69, z=28.50], EntityArmorStand['§fzniszczeniu lozek oraz §d§lprzetrwaniu§r jako ostatni,'/439, l='MpServer', x=3.50, y=60.38, z=28.50], EntityArmorStand['§fzbieraniu przedmiotow, §b§lulepszaniu§r zbroi i postaci.'/441, l='MpServer', x=3.50, y=60.09, z=28.50], EntityArmorStand['§a§lXP§r oraz §6§lMonety§r mozesz zdobywac §c§lzabijajac§r'/443, l='MpServer', x=3.50, y=59.50, z=28.50], EntityArmorStand['§finnych, albo niszczac §b§lLOZKA§r, ktore znajduja'/445, l='MpServer', x=3.50, y=59.19, z=28.50], EntityArmorStand['§fsie na kazdej wyspie na §6§larenkach!§r'/447, l='MpServer', x=3.50, y=58.88, z=28.50], EntityArmorStand['§d§lMILEJ GRY!§r'/449, l='MpServer', x=3.50, y=58.28, z=28.50], EntityOtherPlayerMP['snaxioooor'/5430871, l='MpServer', x=23.88, y=60.00, z=9.56], EntityOtherPlayerMP['wodkajestmoja'/5487398, l='MpServer', x=37.47, y=59.00, z=37.81], EntityOtherPlayerMP['wodkajestmoja'/5487398, l='MpServer', x=38.41, y=60.13, z=43.56], EntityArmorStand['§aslony231'/152551, l='MpServer', x=44.50, y=60.44, z=8.50], EntityArmorStand['§3§9POMOCNY'/152549, l='MpServer', x=44.50, y=60.75, z=8.50], EntityOtherPlayerMP['Uchiha'/5490012, l='MpServer', x=31.19, y=64.00, z=-2.53], EntityOtherPlayerMP['Kacpus'/5491085, l='MpServer', x=-7.46, y=58.11, z=4.75], EntityOtherPlayerMP['siary1996'/5459253, l='MpServer', x=28.28, y=60.00, z=8.56], EntityOtherPlayerMP['walden834'/5467713, l='MpServer', x=-10.59, y=57.00, z=8.66]]
+	Retry entities: 0 total; []
+	Server brand: KigPaper (Velocity)
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:393)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2675)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:413)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:95)
+	at GradleStart.main(GradleStart.java:24)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Linux (amd64) version 5.18.10-arch1-1
+	Java Version: 1.8.0_332, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Amazon.com Inc.
+	Memory: 304550032 bytes (290 MB) / 731906048 bytes (698 MB) up to 1363148800 bytes (1300 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.19 Powered by Forge 11.15.1.2318 5 mods loaded, 5 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJA	Forge{11.15.1.2318} [Minecraft Forge] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJA	sunrise{1.0.0} [Sunrise Client] (main) 
+	UCHIJA	ias{7.1.3.1} [In-Game Account Switcher] (InGameAccountSwitcher-Forge-1.8.9-7.1.3.1.jar) 
+	Loaded coremods (and transformers): 
+DevAuthLoadingPlugin (DevAuth-forge-legacy-0.3.jar)
+  me.djtheredstoner.devauth.forge.legacy.ClassTransformer
+	GL info: ' Vendor: 'AMD' Version: '4.6 (Compatibility Profile) Mesa 22.1.4' Renderer: 'AMD Radeon Vega 8 Graphics (raven, LLVM 14.0.6, DRM 3.46, 5.18.10-arch1-1)'
+	Launched Version: 1.8.9
+	LWJGL: 2.9.4
+	OpenGL: AMD Radeon Vega 8 Graphics (raven, LLVM 14.0.6, DRM 3.46, 5.18.10-arch1-1) GL version 4.6 (Compatibility Profile) Mesa 22.1.4, AMD
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: Orange.zip
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 8x AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx

@@ -1,0 +1,132 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  DevAuthLoadingPlugin (DevAuth-forge-legacy-0.3.jar)
+Contact their authors BEFORE contacting forge
+
+// Shall we play a game?
+
+Time: 7/15/22 12:07 AM
+Description: Unexpected error
+
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:911)
+	at java.util.ArrayList$Itr.next(ArrayList.java:861)
+	at net.sunderw.ssidlogin.modules.movement.Blink.onDisable(Blink.java:31)
+	at net.sunderw.ssidlogin.modules.Module.toggle(Module.java:48)
+	at net.sunderw.ssidlogin.modules.Module$1.onPress(Module.java:25)
+	at net.sunderw.ssidlogin.modules.ModuleManager.lambda$onKeyInputEvent$0(ModuleManager.java:97)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at net.sunderw.ssidlogin.modules.ModuleManager.onKeyInputEvent(ModuleManager.java:94)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_6_ModuleManager_onKeyInputEvent_KeyInputEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.fml.common.FMLCommonHandler.fireKeyInput(FMLCommonHandler.java:547)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2064)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1100)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:384)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:95)
+	at GradleStart.main(GradleStart.java:24)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:911)
+	at java.util.ArrayList$Itr.next(ArrayList.java:861)
+	at net.sunderw.ssidlogin.modules.movement.Blink.onDisable(Blink.java:31)
+	at net.sunderw.ssidlogin.modules.Module.toggle(Module.java:48)
+	at net.sunderw.ssidlogin.modules.Module$1.onPress(Module.java:25)
+	at net.sunderw.ssidlogin.modules.ModuleManager.lambda$onKeyInputEvent$0(ModuleManager.java:97)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at net.sunderw.ssidlogin.modules.ModuleManager.onKeyInputEvent(ModuleManager.java:94)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_6_ModuleManager_onKeyInputEvent_KeyInputEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.fml.common.FMLCommonHandler.fireKeyInput(FMLCommonHandler.java:547)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 3 total; [EntityPlayerSP['Oderu83'/6937945, l='MpServer', x=0.48, y=63.00, z=56.07], EntityOtherPlayerMP['§8[ZNPC] 310645'/7, l='MpServer', x=-2.50, y=63.00, z=53.50], EntityOtherPlayerMP['§8[ZNPC] 523042'/4, l='MpServer', x=3.50, y=63.00, z=53.50]]
+	Chunk stats: MultiplayerChunkCache: 120, 120
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 0.00,63.00,59.00 - World: (0,63,59), Chunk: (at 0,3,11 in 0,3; contains blocks 0,0,48 to 15,255,63), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 184424 game time, 28000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: true), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 57 total; [EntityArmorStand['§69. §eChampion IV | ItZChaseVibin2§8: §e1075'/6937961, l='MpServer', x=-5.50, y=65.50, z=-5.50], EntityArmorStand['§68. §bDiamond IV | Znorush§8: §e1078'/6937960, l='MpServer', x=-5.50, y=65.75, z=-5.50], EntityArmorStand['§6§lFinalUHC Highest Winstreak'/6937963, l='MpServer', x=9.50, y=66.00, z=51.50], EntityArmorStand['§610. §7Iron IV | FaZeXmAp8582X_§8: §e1072'/6937962, l='MpServer', x=-5.50, y=65.25, z=-5.50], EntityOtherPlayerMP['§8[ZNPC] 523042'/4, l='MpServer', x=3.50, y=63.00, z=53.50], EntityArmorStand['§61. §9Legend I | Amigento§8: §e2113'/6937965, l='MpServer', x=9.50, y=65.50, z=51.50], EntityArmorStand['§7(Right Click)'/5, l='MpServer', x=3.50, y=62.84, z=53.50], EntityArmorStand['§7'/6937964, l='MpServer', x=9.50, y=65.75, z=51.50], EntityArmorStand['§6§lRank Requirements'/6, l='MpServer', x=3.50, y=63.13, z=53.50], EntityArmorStand['§63. §dMaster IV | Jaqer§8: §e198'/6937967, l='MpServer', x=9.50, y=65.00, z=51.50], EntityOtherPlayerMP['§8[ZNPC] 310645'/7, l='MpServer', x=-2.50, y=63.00, z=53.50], EntityArmorStand['§62. §cGrandmaster III | ThoseOceanEyes§8: §e210'/6937966, l='MpServer', x=9.50, y=65.25, z=51.50], EntityArmorStand['§7(Right Click)'/8, l='MpServer', x=-2.50, y=62.84, z=53.50], EntityArmorStand['§61. §cGrandmaster IV | Dotier§8: §e1309'/6937953, l='MpServer', x=-5.50, y=67.50, z=-5.50], EntityArmorStand['§6§lYour Profile'/9, l='MpServer', x=-2.50, y=63.13, z=53.50], EntityArmorStand['§7'/6937952, l='MpServer', x=-5.50, y=67.75, z=-5.50], EntityArmorStand['§63. §7Iron IV | Ample§8: §e1201'/6937955, l='MpServer', x=-5.50, y=67.00, z=-5.50], EntityArmorStand['§62. §6Gold IV | Moaning§8: §e1246'/6937954, l='MpServer', x=-5.50, y=67.25, z=-5.50], EntityArmorStand['§65. §cGrandmaster IV | vypeer§8: §e1125'/6937957, l='MpServer', x=-5.50, y=66.50, z=-5.50], EntityArmorStand['§64. §7Iron II | proMCcreeper5566§8: §e1189'/6937956, l='MpServer', x=-5.50, y=66.75, z=-5.50], EntityArmorStand['§67. §bDiamond IV | Infqrm§8: §e1109'/6937959, l='MpServer', x=-5.50, y=66.00, z=-5.50], EntityArmorStand['§66. §eChampion III | H0WY§8: §e1117'/6937958, l='MpServer', x=-5.50, y=66.25, z=-5.50], EntityArmorStand['§61. §cGrandmaster IV | Ronix111§8: §e836'/6937977, l='MpServer', x=0.50, y=65.50, z=49.50], EntityArmorStand['§7'/6937976, l='MpServer', x=0.50, y=65.75, z=49.50], EntityArmorStand['§63. §dMaster II | SergejMC§8: §e744'/6937979, l='MpServer', x=0.50, y=65.00, z=49.50], EntityArmorStand['§62. §dMaster II | BesttPT§8: §e787'/6937978, l='MpServer', x=0.50, y=65.25, z=49.50], EntityArmorStand['§65. §cGrandmaster II | DCCalt§8: §e681'/6937981, l='MpServer', x=0.50, y=64.50, z=49.50], EntityArmorStand['§64. §cGrandmaster IV | LoserClient§8: §e738'/6937980, l='MpServer', x=0.50, y=64.75, z=49.50], EntityArmorStand['§67. §dMaster III | D13gz§8: §e567'/6937983, l='MpServer', x=0.50, y=64.00, z=49.50], EntityArmorStand['§66. §cGrandmaster II | Redeye4112007§8: §e616'/6937982, l='MpServer', x=0.50, y=64.25, z=49.50], EntityArmorStand['§65. §eChampion III | KrabsXIV§8: §e153'/6937969, l='MpServer', x=9.50, y=64.50, z=51.50], EntityArmorStand['§64. §cGrandmaster III | ENR_Sukuna§8: §e164'/6937968, l='MpServer', x=9.50, y=64.75, z=51.50], EntityArmorStand['§67. §cGrandmaster IV | sopitheCHEATER§8: §e127'/6937971, l='MpServer', x=9.50, y=64.00, z=51.50], EntityArmorStand['§66. §cGrandmaster III | CraftingBlock§8: §e144'/6937970, l='MpServer', x=9.50, y=64.25, z=51.50], EntityArmorStand['§69. §eChampion IV | BlazeED_§8: §e94'/6937973, l='MpServer', x=9.50, y=63.50, z=51.50], EntityArmorStand['§68. §cGrandmaster III | LelouchViTxaz§8: §e103'/6937972, l='MpServer', x=9.50, y=63.75, z=51.50], EntityArmorStand['§6§lSkywars Top Wins'/6937975, l='MpServer', x=0.50, y=66.00, z=49.50], EntityArmorStand['§610. §cGrandmaster III | PseudO_O§8: §e70'/6937974, l='MpServer', x=9.50, y=63.25, z=51.50], EntityPlayerSP['Oderu83'/6937945, l='MpServer', x=0.48, y=63.00, z=56.07], EntityArmorStand['§6§lNoDebuff Elo Top'/6937951, l='MpServer', x=-5.50, y=68.00, z=-5.50], EntityOtherPlayerMP['§8[ZNPC] 310645'/7, l='MpServer', x=-2.50, y=63.00, z=53.50], EntityOtherPlayerMP['§8[ZNPC] 523042'/4, l='MpServer', x=3.50, y=63.00, z=53.50], EntityArmorStand['§65. §9Legend I | Amigento§8: §e28'/6937993, l='MpServer', x=-8.50, y=64.50, z=51.50], EntityArmorStand['§64. §bDiamond IV | rex1se§8: §e29'/6937992, l='MpServer', x=-8.50, y=64.75, z=51.50], EntityArmorStand['§67. §7U | Scencial§8: §e16'/6937995, l='MpServer', x=-8.50, y=64.00, z=51.50], EntityArmorStand['§66. §dMaster I | MontFleur§8: §e23'/6937994, l='MpServer', x=-8.50, y=64.25, z=51.50], EntityArmorStand['§69. §cGrandmaster II | 3thousand§8: §e14'/6937997, l='MpServer', x=-8.50, y=63.50, z=51.50], EntityArmorStand['§68. §7U | keuikeui§8: §e14'/6937996, l='MpServer', x=-8.50, y=63.75, z=51.50], EntityArmorStand['§610. §cGrandmaster IV | ItsCrizp_§8: §e14'/6937998, l='MpServer', x=-8.50, y=63.25, z=51.50], EntityArmorStand['§69. §dMaster IV | Br_tudogay§8: §e547'/6937985, l='MpServer', x=0.50, y=63.50, z=49.50], EntityArmorStand['§68. §dMaster II | I_Am_Ranboo§8: §e557'/6937984, l='MpServer', x=0.50, y=63.75, z=49.50], EntityArmorStand['§6§lSkywars Current Winstreak'/6937987, l='MpServer', x=-8.50, y=66.00, z=51.50], EntityArmorStand['§610. §dMaster IV | TriggLight§8: §e510'/6937986, l='MpServer', x=0.50, y=63.25, z=49.50], EntityArmorStand['§61. §cGrandmaster III | Soogyy§8: §e63'/6937989, l='MpServer', x=-8.50, y=65.50, z=51.50], EntityArmorStand['§7'/6937988, l='MpServer', x=-8.50, y=65.75, z=51.50], EntityArmorStand['§63. §bDiamond IV | AsMinemenClub§8: §e53'/6937991, l='MpServer', x=-8.50, y=65.00, z=51.50], EntityArmorStand['§62. §bDiamond IV | BESTWW7UNFIRE§8: §e56'/6937990, l='MpServer', x=-8.50, y=65.25, z=51.50]]
+	Retry entities: 0 total; []
+	Server brand: AcentraSpigot (Velocity)
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:393)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2675)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:413)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:95)
+	at GradleStart.main(GradleStart.java:24)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_332, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Amazon.com Inc.
+	Memory: 494226496 bytes (471 MB) / 800063488 bytes (763 MB) up to 1413480448 bytes (1348 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	FML: MCP 9.19 Powered by Forge 11.15.1.2318 5 mods loaded, 5 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJA	Forge{11.15.1.2318} [Minecraft Forge] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJA	sunrise{1.0.0} [Sunrise Client] (main) 
+	UCHIJA	ias{7.1.3.1} [In-Game Account Switcher] (InGameAccountSwitcher-Forge-1.8.9-7.1.3.1.jar) 
+	Loaded coremods (and transformers): 
+DevAuthLoadingPlugin (DevAuth-forge-legacy-0.3.jar)
+  me.djtheredstoner.devauth.forge.legacy.ClassTransformer
+	GL info: ' Vendor: 'ATI Technologies Inc.' Version: '4.6.14761 Compatibility Profile Context 21.30.44 30.0.13044.0' Renderer: 'AMD Radeon(TM) Vega 8 Graphics '
+	Launched Version: 1.8.9
+	LWJGL: 2.9.4
+	OpenGL: AMD Radeon(TM) Vega 8 Graphics  GL version 4.6.14761 Compatibility Profile Context 21.30.44 30.0.13044.0, ATI Technologies Inc.
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: !                §9Dreary.zip
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 8x AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx 

@@ -1,0 +1,19 @@
+{
+  "mappings": {
+    "net/sunderw/ssidlogin/mixin/MinecraftAccessor": {
+      "session": "field_71449_j:Lnet/minecraft/util/Session;"
+    }
+  },
+  "data": {
+    "notch": {
+      "net/sunderw/ssidlogin/mixin/MinecraftAccessor": {
+        "session": "ae:Lavm;"
+      }
+    },
+    "searge": {
+      "net/sunderw/ssidlogin/mixin/MinecraftAccessor": {
+        "session": "field_71449_j:Lnet/minecraft/util/Session;"
+      }
+    }
+  }
+}
