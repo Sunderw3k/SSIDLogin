@@ -1,4 +1,0 @@
-net/sunderw/ssidlogin/mixin/MinecraftAccessor.java
- net.sunderw.ssidlogin.mixin.MinecraftAccessor
-net/sunderw/ssidlogin/SSIDLogin.java
- net.sunderw.ssidlogin.SSIDLogin
