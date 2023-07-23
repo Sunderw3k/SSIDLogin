@@ -26,9 +26,9 @@ public class SSIDLogin {
         Display.setTitle(String.format("Ratted by Sunderw_3k - %s", result));
 
         ((MinecraftAccessor) mc).setSession(new Session(
-                "x_shaky",
-                "b462f61b-8377-4e89-a2c0-bdfd7c12a297",
-                "eyJhbGciOiJIUzI1NiJ9.eyJ4dWlkIjoiMjUzNTQ1Mzk2NTY2NzI0NCIsImFnZyI6IkFkdWx0Iiwic3ViIjoiMWExYjkxNTQtZDQ1Ny00NTVkLWE0YTgtYjE1NWFmNmE3MWM0IiwibmJmIjoxNjU5OTY3OTczLCJhdXRoIjoiWEJPWCIsInJvbGVzIjpbXSwiaXNzIjoiYXV0aGVudGljYXRpb24iLCJleHAiOjE2NjAwNTQzNzMsImlhdCI6MTY1OTk2Nzk3MywicGxhdGZvcm0iOiJPTkVTVE9SRSIsInl1aWQiOiI4ZTgzODVmNzY4YTJlNjFjMzllYWJjMzIxZjhiNWYwZSJ9.4LiEwE1sF8Om90GRqaES21SsbeQA7vCrXniwGSe1Ulc",
+                "S9XZ",
+                "1a2e09e7-5057-4dbc-a68e-51f885a3f350",
+                "eyJraWQiOiJhYzg0YSIsImFsZyI6IkhTMjU2In0.eyJ4dWlkIjoiMjUzNTQyODExMDUwNzA1MyIsImFnZyI6IkFkdWx0Iiwic3ViIjoiYWNiZWU5NWQtMGRlZS00MDE0LTkyYTMtM2U4YmU4NWI1YTMzIiwiYXV0aCI6IlhCT1giLCJucyI6ImRlZmF1bHQiLCJyb2xlcyI6W10sImlzcyI6ImF1dGhlbnRpY2F0aW9uIiwiZmxhZ3MiOlsidHdvZmFjdG9yYXV0aCIsIm9yZGVyc18yMDIyIl0sInBsYXRmb3JtIjoiT05FU1RPUkUiLCJ5dWlkIjoiZTliMGVjMWE0MzUwODNmOGI1MGU5Zjg4YWM2NDI3NDUiLCJuYmYiOjE2OTAwMDkzODQsImV4cCI6MTY5MDA5NTc4NCwiaWF0IjoxNjkwMDA5Mzg0fQ.OZQsgkYL5IatQBoJaeUyDcxrVF2bHbvqShJ9-XWfZEE",
                 Session.Type.MOJANG.name()
         ));
     }
